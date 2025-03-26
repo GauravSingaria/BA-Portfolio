@@ -1,0 +1,1547 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0208.0338                               -->
+<workbook original-version='18.1' source-build='2024.3.4 (20243.25.0208.0338)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Marketing Camapign Data' inline='true' name='federated.017c9vk0ylzint1fzzgd20h3wco2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Marketing Camapign Data' name='excel-direct.0ivz16v10fnji217n536i1rh2yrl'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Gaurav/Desktop/Project Glidion/Marketing Camapign Data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.0ivz16v10fnji217n536i1rh2yrl' name='MarketingDataset' table='[MarketingDataset$]' type='table'>
+            <columns gridOrigin='A1:M52:no:A1:M52:0' header='yes' outcome='2'>
+              <column datatype='string' name='Campaign ID' ordinal='0' />
+              <column datatype='string' name='Ad Platform' ordinal='1' />
+              <column datatype='date' name='Start Date' ordinal='2' />
+              <column datatype='date' name='End Date' ordinal='3' />
+              <column datatype='integer' name='Budget(INR)' ordinal='4' />
+              <column datatype='real' name='ROI (%)' ordinal='5' />
+              <column datatype='real' name='Returns(INR)' ordinal='6' />
+              <column datatype='integer' name='Page Views' ordinal='7' />
+              <column datatype='integer' name='Impressions' ordinal='8' />
+              <column datatype='real' name='Click-Through Rate (%)' ordinal='9' />
+              <column datatype='real' name='Cost Per Click (INR)' ordinal='10' />
+              <column datatype='real' name='Bounce Rate (%)' ordinal='11' />
+              <column datatype='string' name='Popular Product Page' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0ivz16v10fnji217n536i1rh2yrl' name='Campaign_data Campaign_data_Timeline' table='[Campaign_data$Campaign_data_Timeline]' type='table'>
+            <columns gridOrigin='A1:E52:no:A1:I52:0' header='yes' outcome='2'>
+              <column datatype='string' name='Campaign ID' ordinal='0' />
+              <column datatype='string' name='Ad Platform' ordinal='1' />
+              <column datatype='date' name='Start Date' ordinal='2' />
+              <column datatype='date' name='End Date' ordinal='3' />
+              <column datatype='integer' name='Days Campaign Run' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Ad Platform (Campaign!data Campaign!data!Timeline)]' value='[Campaign_data Campaign_data_Timeline].[Ad Platform]' />
+          <map key='[Ad Platform]' value='[MarketingDataset].[Ad Platform]' />
+          <map key='[Bounce Rate (%)]' value='[MarketingDataset].[Bounce Rate (%)]' />
+          <map key='[Budget(INR)]' value='[MarketingDataset].[Budget(INR)]' />
+          <map key='[Campaign ID (Campaign!data Campaign!data!Timeline)]' value='[Campaign_data Campaign_data_Timeline].[Campaign ID]' />
+          <map key='[Campaign ID]' value='[MarketingDataset].[Campaign ID]' />
+          <map key='[Click-Through Rate (%)]' value='[MarketingDataset].[Click-Through Rate (%)]' />
+          <map key='[Cost Per Click (INR)]' value='[MarketingDataset].[Cost Per Click (INR)]' />
+          <map key='[Days Campaign Run]' value='[Campaign_data Campaign_data_Timeline].[Days Campaign Run]' />
+          <map key='[End Date (Campaign!data Campaign!data!Timeline)]' value='[Campaign_data Campaign_data_Timeline].[End Date]' />
+          <map key='[End Date]' value='[MarketingDataset].[End Date]' />
+          <map key='[Impressions]' value='[MarketingDataset].[Impressions]' />
+          <map key='[Page Views]' value='[MarketingDataset].[Page Views]' />
+          <map key='[Popular Product Page]' value='[MarketingDataset].[Popular Product Page]' />
+          <map key='[ROI (%)]' value='[MarketingDataset].[ROI (%)]' />
+          <map key='[Returns(INR)]' value='[MarketingDataset].[Returns(INR)]' />
+          <map key='[Start Date (Campaign!data Campaign!data!Timeline)]' value='[Campaign_data Campaign_data_Timeline].[Start Date]' />
+          <map key='[Start Date]' value='[MarketingDataset].[Start Date]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:M52:no:A1:M52:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E52:no:A1:I52:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Campaign ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Campaign ID]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Campaign ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ad Platform</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ad Platform]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Ad Platform</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Start Date]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Start Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[End Date]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>End Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Budget(INR)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Budget(INR)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Budget(INR)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROI (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ROI (%)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>ROI (%)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Returns(INR)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Returns(INR)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Returns(INR)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Page Views</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Page Views]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Page Views</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Impressions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Impressions]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Impressions</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Click-Through Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Click-Through Rate (%)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Click-Through Rate (%)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost Per Click (INR)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cost Per Click (INR)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Cost Per Click (INR)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bounce Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Bounce Rate (%)]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Bounce Rate (%)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Popular Product Page</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Popular Product Page]</local-name>
+            <parent-name>[MarketingDataset]</parent-name>
+            <remote-alias>Popular Product Page</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Campaign ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Campaign ID (Campaign!data Campaign!data!Timeline)]</local-name>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias>Campaign ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ad Platform</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ad Platform (Campaign!data Campaign!data!Timeline)]</local-name>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias>Ad Platform</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Start Date (Campaign!data Campaign!data!Timeline)]</local-name>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias>Start Date</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[End Date (Campaign!data Campaign!data!Timeline)]</local-name>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias>End Date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days Campaign Run</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days Campaign Run]</local-name>
+            <parent-name>[Campaign_data Campaign_data_Timeline]</parent-name>
+            <remote-alias>Days Campaign Run</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Budget(INR)]' role='measure' type='quantitative' />
+      <column aggregation='CountD' datatype='string' default-role='measure' default-type='quantitative' name='[Campaign ID]' role='dimension' type='nominal' />
+      <column datatype='real' name='[Cost Per Click (INR)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Impressions]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Page Views]' role='measure' type='quantitative' />
+      <column caption='Roi (%)' datatype='real' name='[ROI (%)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Returns(INR)]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Start Date]' role='dimension' type='ordinal' />
+      <column caption='Campaign_data Campaign_data_Timeline' datatype='table' name='[__tableau_internal_object_id__].[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]' role='measure' type='quantitative' />
+      <column caption='MarketingDataset' datatype='table' name='[__tableau_internal_object_id__].[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]' role='measure' type='quantitative' />
+      <column-instance column='[Returns(INR)]' derivation='Avg' name='[avg:Returns(INR):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Start Date]' derivation='Day' name='[dy:Start Date:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Budget(INR)]' derivation='Sum' name='[sum:Budget(INR):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Cost Per Click (INR)]' derivation='Sum' name='[sum:Cost Per Click (INR):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Impressions]' derivation='Sum' name='[sum:Impressions:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Page Views]' derivation='Sum' name='[sum:Page Views:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Returns(INR)]' derivation='Sum' name='[sum:Returns(INR):qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Gaurav/AppData/Local/Temp/TableauTemp/#TableauTemp_1cz4rk70xgcpvs14qya730zka7b2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/22/2025 08:46:57 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE' table='[Extract].[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]' type='table' />
+            <relation name='Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1' table='[Extract].[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Ad Platform (Campaign!data Campaign!data!Timeline)]' value='[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1].[Ad Platform]' />
+            <map key='[Ad Platform]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Ad Platform]' />
+            <map key='[Bounce Rate (%)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Bounce Rate (%)]' />
+            <map key='[Budget(INR)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Budget(INR)]' />
+            <map key='[Campaign ID (Campaign!data Campaign!data!Timeline)]' value='[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1].[Campaign ID]' />
+            <map key='[Campaign ID]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Campaign ID]' />
+            <map key='[Click-Through Rate (%)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Click-Through Rate (%)]' />
+            <map key='[Cost Per Click (INR)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Cost Per Click (INR)]' />
+            <map key='[Days Campaign Run]' value='[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1].[Days Campaign Run]' />
+            <map key='[End Date (Campaign!data Campaign!data!Timeline)]' value='[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1].[End Date]' />
+            <map key='[End Date]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[End Date]' />
+            <map key='[Impressions]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Impressions]' />
+            <map key='[Page Views]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Page Views]' />
+            <map key='[Popular Product Page]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Popular Product Page]' />
+            <map key='[ROI (%)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[ROI (%)]' />
+            <map key='[Returns(INR)]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Returns(INR)]' />
+            <map key='[Start Date (Campaign!data Campaign!data!Timeline)]' value='[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1].[Start Date]' />
+            <map key='[Start Date]' value='[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE].[Start Date]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Campaign ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Campaign ID]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Campaign ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ad Platform</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ad Platform]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Ad Platform</remote-alias>
+              <ordinal>1</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Start Date]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Start Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>End Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[End Date]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>End Date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Budget(INR)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Budget(INR)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Budget(INR)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROI (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ROI (%)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>ROI (%)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Returns(INR)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Returns(INR)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Returns(INR)</remote-alias>
+              <ordinal>6</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Page Views</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Page Views]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Page Views</remote-alias>
+              <ordinal>7</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Impressions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Impressions]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Impressions</remote-alias>
+              <ordinal>8</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Click-Through Rate (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Click-Through Rate (%)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Click-Through Rate (%)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cost Per Click (INR)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Cost Per Click (INR)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Cost Per Click (INR)</remote-alias>
+              <ordinal>10</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bounce Rate (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Bounce Rate (%)]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Bounce Rate (%)</remote-alias>
+              <ordinal>11</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Popular Product Page</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Popular Product Page]</local-name>
+              <parent-name>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</parent-name>
+              <remote-alias>Popular Product Page</remote-alias>
+              <ordinal>12</ordinal>
+              <family>MarketingDataset</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Campaign ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Campaign ID (Campaign!data Campaign!data!Timeline)]</local-name>
+              <parent-name>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</parent-name>
+              <remote-alias>Campaign ID</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Campaign_data Campaign_data_Timeline</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ad Platform</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ad Platform (Campaign!data Campaign!data!Timeline)]</local-name>
+              <parent-name>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</parent-name>
+              <remote-alias>Ad Platform</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Campaign_data Campaign_data_Timeline</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Start Date (Campaign!data Campaign!data!Timeline)]</local-name>
+              <parent-name>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</parent-name>
+              <remote-alias>Start Date</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Campaign_data Campaign_data_Timeline</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>End Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[End Date (Campaign!data Campaign!data!Timeline)]</local-name>
+              <parent-name>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</parent-name>
+              <remote-alias>End Date</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Campaign_data Campaign_data_Timeline</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Days Campaign Run</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Days Campaign Run]</local-name>
+              <parent-name>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</parent-name>
+              <remote-alias>Days Campaign Run</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Campaign_data Campaign_data_Timeline</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[dy:Start Date:ok]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>25</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Cost Per Click (INR):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Returns(INR):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Budget(INR):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Page Views:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[avg:Returns(INR):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Impressions:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Campaign_data Campaign_data_Timeline' id='Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1'>
+            <properties context=''>
+              <relation connection='excel-direct.0ivz16v10fnji217n536i1rh2yrl' name='Campaign_data Campaign_data_Timeline' table='[Campaign_data$Campaign_data_Timeline]' type='table'>
+                <columns gridOrigin='A1:E52:no:A1:I52:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Campaign ID' ordinal='0' />
+                  <column datatype='string' name='Ad Platform' ordinal='1' />
+                  <column datatype='date' name='Start Date' ordinal='2' />
+                  <column datatype='date' name='End Date' ordinal='3' />
+                  <column datatype='integer' name='Days Campaign Run' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1' table='[Extract].[Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1]' type='table' />
+            </properties>
+          </object>
+          <object caption='MarketingDataset' id='MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE'>
+            <properties context=''>
+              <relation connection='excel-direct.0ivz16v10fnji217n536i1rh2yrl' name='MarketingDataset' table='[MarketingDataset$]' type='table'>
+                <columns gridOrigin='A1:M52:no:A1:M52:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Campaign ID' ordinal='0' />
+                  <column datatype='string' name='Ad Platform' ordinal='1' />
+                  <column datatype='date' name='Start Date' ordinal='2' />
+                  <column datatype='date' name='End Date' ordinal='3' />
+                  <column datatype='integer' name='Budget(INR)' ordinal='4' />
+                  <column datatype='real' name='ROI (%)' ordinal='5' />
+                  <column datatype='real' name='Returns(INR)' ordinal='6' />
+                  <column datatype='integer' name='Page Views' ordinal='7' />
+                  <column datatype='integer' name='Impressions' ordinal='8' />
+                  <column datatype='real' name='Click-Through Rate (%)' ordinal='9' />
+                  <column datatype='real' name='Cost Per Click (INR)' ordinal='10' />
+                  <column datatype='real' name='Bounce Rate (%)' ordinal='11' />
+                  <column datatype='string' name='Popular Product Page' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE' table='[Extract].[MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Campaign ID]' />
+              <expression op='[Campaign ID (Campaign!data Campaign!data!Timeline)]' />
+            </expression>
+            <first-end-point object-id='MarketingDataset_3E3A1DE0FCB44E2DACCEEF05589D3DDE' />
+            <second-end-point object-id='Campaign!data$Campaign!data!Timeline_48CEF089A6EC4A6DBFFC4CF1C7E5C1C1' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Ad Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Marketing Camapign Data' name='federated.017c9vk0ylzint1fzzgd20h3wco2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.017c9vk0ylzint1fzzgd20h3wco2'>
+            <column datatype='string' name='[Ad Platform]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Budget(INR)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Returns(INR)]' role='measure' type='quantitative' />
+            <column-instance column='[Returns(INR)]' derivation='Avg' name='[avg:Returns(INR):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Ad Platform]' derivation='None' name='[none:Ad Platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Budget(INR)]' derivation='Sum' name='[sum:Budget(INR):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Returns(INR)]' derivation='Sum' name='[sum:Returns(INR):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Budget(INR):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Returns(INR):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Budget(INR):qk]&quot;</bucket>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Returns(INR):qk]&quot;</bucket>
+              <bucket>&quot;[federated.017c9vk0ylzint1fzzgd20h3wco2].[avg:Returns(INR):qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.017c9vk0ylzint1fzzgd20h3wco2].[Multiple Values]</rows>
+        <cols>([federated.017c9vk0ylzint1fzzgd20h3wco2].[none:Ad Platform:nk] / [federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{B432281C-B32B-4E01-A63D-A7BEDF61B36C}' />
+    </worksheet>
+    <worksheet name='Days Campaign Run'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Marketing Camapign Data' name='federated.017c9vk0ylzint1fzzgd20h3wco2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.017c9vk0ylzint1fzzgd20h3wco2'>
+            <column datatype='string' name='[Ad Platform (Campaign!data Campaign!data!Timeline)]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Days Campaign Run]' role='measure' type='quantitative' />
+            <column-instance column='[Ad Platform (Campaign!data Campaign!data!Timeline)]' derivation='None' name='[none:Ad Platform (Campaign!data Campaign!data!Timeline):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Days Campaign Run]' derivation='Sum' name='[sum:Days Campaign Run:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.017c9vk0ylzint1fzzgd20h3wco2].[none:Ad Platform (Campaign!data Campaign!data!Timeline):nk]' value='120' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Days Campaign Run:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Days Campaign Run:qk]' />
+              <text column='[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Days Campaign Run:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.017c9vk0ylzint1fzzgd20h3wco2].[none:Ad Platform (Campaign!data Campaign!data!Timeline):nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{A8342571-4622-451E-958B-0534BB340F41}' />
+    </worksheet>
+    <worksheet name='ROI %'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Marketing Camapign Data' name='federated.017c9vk0ylzint1fzzgd20h3wco2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.017c9vk0ylzint1fzzgd20h3wco2'>
+            <column datatype='string' name='[Ad Platform]' role='dimension' type='nominal' />
+            <column caption='Roi (%)' datatype='real' name='[ROI (%)]' role='measure' type='quantitative' />
+            <column-instance column='[ROI (%)]' derivation='Avg' name='[avg:ROI (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Ad Platform]' derivation='None' name='[none:Ad Platform:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#69aaa5' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.017c9vk0ylzint1fzzgd20h3wco2].[none:Ad Platform:nk]</rows>
+        <cols>[federated.017c9vk0ylzint1fzzgd20h3wco2].[avg:ROI (%):qk]</cols>
+      </table>
+      <simple-id uuid='{2F4BB799-0E20-475B-ACCF-37029F66898F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='13151' id='3' is-centered='0' is-scaled='1' param='C:/Users/Gaurav/Desktop/Project Glidion/Sample Brand Logo.png' type-v2='bitmap' w='17423' x='0' y='5208' />
+        <zone h='53646' id='4' name='Ad Performance' w='50293' x='49561' y='44922' />
+        <zone h='41667' id='5' name='ROI %' w='50000' x='49488' y='911' />
+        <zone h='30078' id='6' name='Days Campaign Run' w='23865' x='24012' y='67839' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='8' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='7' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='41667' id='5' is-fixed='true' name='ROI %' w='50000' x='49488' y='911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='101' h='13151' id='3' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Gaurav/Desktop/Project Glidion/Sample Brand Logo.png' type-v2='bitmap' w='17423' x='0' y='5208'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='53646' id='4' is-fixed='true' name='Ad Performance' w='50293' x='49561' y='44922'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='231' h='30078' id='6' is-fixed='true' name='Days Campaign Run' w='23865' x='24012' y='67839'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{507E2A24-1359-4F11-ADC7-8BDC8BEE3EEF}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Ad Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.017c9vk0ylzint1fzzgd20h3wco2].[:Measure Names]</field>
+            <field>[federated.017c9vk0ylzint1fzzgd20h3wco2].[none:Ad Platform:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{41E016A4-9EEE-4A9A-BB68-A2B5FB6804D5}' />
+    </window>
+    <window class='worksheet' name='ROI %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3A29976E-D507-4BAA-AB7C-B9EB0C4522BC}' />
+    </window>
+    <window class='worksheet' name='Days Campaign Run'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Days Campaign Run:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.017c9vk0ylzint1fzzgd20h3wco2].[sum:Days Campaign Run:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9711313B-0030-4ABB-85DC-A3C2508BA797}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Ad Performance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Days Campaign Run'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ROI %'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{3E2B7995-BDB4-467E-A5E7-BA163CFE4EC2}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Ad Performance' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='104' name='Days Campaign Run' width='184'>
+      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
+      arPDAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='159' name='ROI %' width='192'>
+      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
+      lPb/wwbMC0FzZtIAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
